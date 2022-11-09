@@ -1,0 +1,10 @@
+==============Query===============
+ALTER TABLE `withdraws` ADD `withdrawal_fees` DOUBLE NULL DEFAULT NULL AFTER `amount`;
+
+
+ALTER TABLE `topup_funds` ADD `processing_percentage` DOUBLE NULL DEFAULT NULL AFTER `processing_fees`;
+
+ALTER TABLE `payments_bank` ADD `second_account_name` VARCHAR(191) NOT NULL AFTER `account_opening`, ADD `second_bank_name` VARCHAR(191) NOT NULL AFTER `second_account_name`, ADD `second_account_number` INT(11) NOT NULL AFTER `second_bank_name`, ADD `second_account_opening` VARCHAR(191) NOT NULL AFTER `second_account_number`;
+
+
+ALTER TABLE `traders` ADD `minimum_amount` DOUBLE NOT NULL AFTER `description`, ADD `maximum_amount` DOUBLE NULL DEFAULT NULL AFTER `minimum_amount`;
